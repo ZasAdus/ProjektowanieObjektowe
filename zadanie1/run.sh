@@ -9,6 +9,6 @@ else
     echo "Obraz $IMAGE już istnieje"
 fi
 
-docker run -it $IMAGE -name kontener_zasadus
+docker run -it --name kontener_zasadus $IMAGE 
 
 docker rm kontener_zasadus
