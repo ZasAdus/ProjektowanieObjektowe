@@ -7,10 +7,21 @@
 ✅ 5.0 Skrypt w bashu do uruchamiania aplikacji w Pascalu via docker (https://github.com/ZasAdus/ProjektowanieObjektowe/commit/ee9fa8a75d3168e6bbf7fbb93e60a3493b8fad24)<br> 
 
 <h2>Zadanie 2 Wzorce architektury:<h2>
-✅ 3.0 Należy stworzyć jeden model z kontrolerem z produktami, zgodnie z CRUD (JSON) (filmik)[https://youtu.be/q3eR8H344cs]<br>
+✅ 3.0 Należy stworzyć jeden model z kontrolerem z produktami, zgodnie z CRUD (JSON) [filmik](https://youtu.be/q3eR8H344cs)<br>
 3.5 Należy stworzyć skrypty do testów endpointów via curl (JSON)<br>
 4.0 Należy stworzyć dwa dodatkowe kontrolery wraz z modelami  (JSON)<br>
 4.5 Należy stworzyć widoki do wszystkich kontrolerów<br>
-5.0 Stworzenie panelu administracyjnego<br> <h1>
+5.0 Stworzenie panelu administracyjnego<br> 
 
+<h2> Zadanie 3 Wzorce kreacyjne <h2>
+Spring Boot (Kotlin)
+
+✅ 3.0 Należy stworzyć jeden kontroler wraz z danymi wyświetlanymi z listy na endpoint’cie w formacie JSON - Kotlin + Spring Boot [filmik](https://youtu.be/N8_4V9y8H8U)<br>
+3.5 Należy stworzyć klasę do autoryzacji (mock) jako Singleton w
+formie eager <br>
+4.0 Należy obsłużyć dane autoryzacji przekazywane przez użytkownika <br>
+4.5 Należy wstrzyknąć singleton do głównej klasy via @Autowired lub 
+kontruktor (constructor injection)<br>
+5.0 Obok wersji Eager do wyboru powinna być wersja Singletona w wersji
+lazy <br> <h1>
 
