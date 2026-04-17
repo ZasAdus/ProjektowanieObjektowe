@@ -3,25 +3,25 @@
 ✅ 3.0 Procedura do generowania 50 losowych liczb od 0 do 100 [commit](https://github.com/ZasAdus/ProjektowanieObjektowe/commit/1d535ad93da1d0b8ec53b559b59442b545094c3d) <br>
 ✅ 3.5 Procedura do sortowania liczb [commit](https://github.com/ZasAdus/ProjektowanieObjektowe/commit/2040d35bb2541a3e4e4077676740a057a7224ae0)<br>
 ✅ 4.0 Dodanie parametrów do procedury losującej określającymi zakres losowania: od, do, ile [commit](https://github.com/ZasAdus/ProjektowanieObjektowe/commit/9b4b502212091884f18c74a9256fd37dfcc0dd40) <br>
-4.5 5 testów jednostkowych testujące procedury <br>
+❌ 4.5 5 testów jednostkowych testujące procedury <br>
 ✅ 5.0 Skrypt w bashu do uruchamiania aplikacji w Pascalu via docker [commit](https://github.com/ZasAdus/ProjektowanieObjektowe/commit/ee9fa8a75d3168e6bbf7fbb93e60a3493b8fad24)<br> 
 
 <h2>Zadanie 2 Wzorce architektury:<h2>
 ✅ 3.0 Należy stworzyć jeden model z kontrolerem z produktami, zgodnie z CRUD (JSON) [filmik](https://youtu.be/q3eR8H344cs)<br>
-3.5 Należy stworzyć skrypty do testów endpointów via curl (JSON)<br>
-4.0 Należy stworzyć dwa dodatkowe kontrolery wraz z modelami  (JSON)<br>
-4.5 Należy stworzyć widoki do wszystkich kontrolerów<br>
-5.0 Stworzenie panelu administracyjnego<br> 
+❌ 3.5 Należy stworzyć skrypty do testów endpointów via curl (JSON)<br>
+❌ 4.0 Należy stworzyć dwa dodatkowe kontrolery wraz z modelami  (JSON)<br>
+❌ 4.5 Należy stworzyć widoki do wszystkich kontrolerów<br>
+❌ 5.0 Stworzenie panelu administracyjnego<br> 
 
 <h2> Zadanie 3 Wzorce kreacyjne <h2>
 Spring Boot (Kotlin)
 
 ✅ 3.0 Należy stworzyć jeden kontroler wraz z danymi wyświetlanymi z listy na endpoint’cie w formacie JSON - Kotlin + Spring Boot [filmik](https://youtu.be/N8_4V9y8H8U)<br>
-3.5 Należy stworzyć klasę do autoryzacji (mock) jako Singleton w
+❌ 3.5 Należy stworzyć klasę do autoryzacji (mock) jako Singleton w
 formie eager <br>
-4.0 Należy obsłużyć dane autoryzacji przekazywane przez użytkownika <br>
-4.5 Należy wstrzyknąć singleton do głównej klasy via @Autowired lub 
+❌ 4.0 Należy obsłużyć dane autoryzacji przekazywane przez użytkownika <br>
+❌ 4.5 Należy wstrzyknąć singleton do głównej klasy via @Autowired lub 
 kontruktor (constructor injection)<br>
-5.0 Obok wersji Eager do wyboru powinna być wersja Singletona w wersji
+❌ 5.0 Obok wersji Eager do wyboru powinna być wersja Singletona w wersji
 lazy <br> <h1>
 
