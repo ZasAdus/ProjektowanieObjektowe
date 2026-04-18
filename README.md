@@ -13,15 +13,19 @@
 ❌ 4.5 Należy stworzyć widoki do wszystkich kontrolerów<br>
 ❌ 5.0 Stworzenie panelu administracyjnego<br> 
 
-<h2> Zadanie 3 Wzorce kreacyjne <h2>
+<h2> Zadanie 3 Wzorce kreacyjne:<h2>
 Spring Boot (Kotlin)
 
 ✅ 3.0 Należy stworzyć jeden kontroler wraz z danymi wyświetlanymi z listy na endpoint’cie w formacie JSON - Kotlin + Spring Boot [filmik](https://youtu.be/N8_4V9y8H8U)<br>
-❌ 3.5 Należy stworzyć klasę do autoryzacji (mock) jako Singleton w
-formie eager <br>
+❌ 3.5 Należy stworzyć klasę do autoryzacji (mock) jako Singleton w formie eager <br>
 ❌ 4.0 Należy obsłużyć dane autoryzacji przekazywane przez użytkownika <br>
-❌ 4.5 Należy wstrzyknąć singleton do głównej klasy via @Autowired lub 
-kontruktor (constructor injection)<br>
-❌ 5.0 Obok wersji Eager do wyboru powinna być wersja Singletona w wersji
-lazy <br> <h1>
+❌ 4.5 Należy wstrzyknąć singleton do głównej klasy via @Autowired lub kontruktor (constructor injection)<br>
+❌ 5.0 Obok wersji Eager do wyboru powinna być wersja Singletona w wersji lazy <br>
+
+<h2>Zadanie 4 Wzorce strukturalne:<h2>
+✅ 3.0 Należy stworzyć aplikację we frameworki echo w j. Go, która będzie miała kontroler Pogody, która pozwala na pobieranie danych o pogodzie (lub akcjach giełdowych) [filmik](https://youtu.be/ey2Z1S6Nppo)<br>
+❌ 3.5 Należy stworzyć model Pogoda (lub Giełda) wykorzystując gorm, a dane załadować z listy przy uruchomieniu <br>
+❌ 4.0 Należy stworzyć klasę proxy, która pobierze dane z serwisu zewnętrznego podczas zapytania do naszego kontrolera <br>
+❌ 4.5 Należy zapisać pobrane dane z zewnątrz do bazy danych <br>
+❌ 5.0 Należy rozszerzyć endpoint na więcej niż jedną lokalizację (Pogoda), lub akcje (Giełda) zwracając JSONa <br> <h1>
 
