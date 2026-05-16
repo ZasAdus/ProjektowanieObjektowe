@@ -38,7 +38,7 @@ Spring Boot (Kotlin)
 ❌ 5.0 Należy wykorzystać bibliotekę axios do komunikacji z serwerem oraz skonfigurować obsługę CORS, aby frontend mógł poprawnie komunikować się z backendem. <br>
 
 <h2>Zadanie 6 Zapaszki<h2>
-✅ 3.0 Należy skonfigurować husky + lint-staged uruchamianie lintowania przed commitem <br>
+✅ 3.0 Należy skonfigurować husky + lint-staged uruchamianie lintowania przed commitem [filmik](https://youtu.be/7RMKuKq1zYk) <br>
 ❌ 3.5 Należy wyeliminować wszystkie bugi w kodzie w Sonarze (kod aplikacji klienckiej) <br>
 ❌ 4.0 Przeskanować oraz naprawić dowolny projekt open source narzędziem CodeQL https://codeql.github.com/ <br>
 ❌ 4.5 Należy usunąć problemy typu Code Smell w kodzie w Sonarze (kotlin, go, js). Należy dodać badge z  Sonara <br>
