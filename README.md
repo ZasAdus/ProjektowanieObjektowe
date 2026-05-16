@@ -1,4 +1,5 @@
 <h1>Zadania z przedmiotu Projektowanie Obiektowe
+Jeżeli chodzi o dostarczanie zadań na czas to można sie sugerować datami uploadu filmików na yt.
 <h2>Zadanie 1 Sortowanie Bąbelkowe:<h2>
 ✅ 3.0 Procedura do generowania 50 losowych liczb od 0 do 100 [commit](https://github.com/ZasAdus/ProjektowanieObjektowe/commit/1d535ad93da1d0b8ec53b559b59442b545094c3d) <br>
 ✅ 3.5 Procedura do sortowania liczb [commit](https://github.com/ZasAdus/ProjektowanieObjektowe/commit/2040d35bb2541a3e4e4077676740a057a7224ae0)<br>
