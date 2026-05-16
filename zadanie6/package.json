@@ -1,0 +1,18 @@
+{
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.4.0",
+    "globals": "^17.6.0",
+    "lint-staged": "^17.0.5"
+  },
+  "scripts": {
+    "prepare": "husky"
+  },
+  "lint-staged": {
+  "frontend/**/*.{js,jsx}": [
+    "eslint"
+  ]
+  },
+  "type": "module"
+}
