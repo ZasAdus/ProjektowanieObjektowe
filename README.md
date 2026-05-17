@@ -43,4 +43,11 @@ Spring Boot (Kotlin)
 ❌ 3.5 Należy wyeliminować wszystkie bugi w kodzie w Sonarze (kod aplikacji klienckiej) <br>
 ❌ 4.0 Przeskanować oraz naprawić dowolny projekt open source narzędziem CodeQL https://codeql.github.com/ <br>
 ❌ 4.5 Należy usunąć problemy typu Code Smell w kodzie w Sonarze (kotlin, go, js). Należy dodać badge z  Sonara <br>
-❌ 5.0 Skonfigurować Github Actions z linterem oraz CodeQL <br> <h1>
+❌ 5.0 Skonfigurować Github Actions z linterem oraz CodeQL <br>
+
+<h2>Zadanie 7 Vapor/Fluent/Swift<h2>
+✅ 3.0 Należy stworzyć kontroler wraz z modele Produktów zgodny z CRUD w ORM Fluent [filmik](https://youtu.be/N_z9VFHsguY)<br>
+❌ 3.5 Należy stworzyć szablony w Leaf<br>
+❌ 4.0 Należy stworzyć drugi model oraz kontroler Kategorii wraz z relacją<br>
+❌ 4.5 Należy wykorzystać Redis do przechowywania danych<br>
+❌ 5.0 Wrzucić aplikację na heroku <br> <h1>
