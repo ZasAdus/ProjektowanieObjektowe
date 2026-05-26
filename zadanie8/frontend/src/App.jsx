@@ -1,6 +1,15 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
-const API_BASE_URL = 'http://localhost:8080/auth';
+const API_BASE_URL = '/api/auth';
+
+function getModeFromPath(pathname) {
+  const normalizedPath = pathname.replace(/\/+$/, '') || '/';
+  return normalizedPath === '/auth/register' ? 'register' : 'login';
+}
+
+function getPathForMode(mode) {
+  return mode === 'register' ? '/auth/register' : '/auth/login';
+}
 
 async function requestJson(path, body) {
   const response = await fetch(`${API_BASE_URL}${path}`, {
@@ -24,20 +33,44 @@ async function requestJson(path, body) {
 }
 
 export default function App() {
-  const [mode, setMode] = useState('login');
+  const [mode, setMode] = useState(() => getModeFromPath(window.location.pathname));
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [status, setStatus] = useState('');
   const [loading, setLoading] = useState(false);
   const [userId, setUserId] = useState(null);
 
-  const handleSubmit = async () => {
+  useEffect(() => {
+    const handlePopState = () => {
+      setMode(getModeFromPath(window.location.pathname));
+      setStatus('');
+      setUserId(null);
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
+
+  const switchMode = (nextMode) => {
+    if (nextMode === mode) {
+      return;
+    }
+
+    window.history.pushState({}, '', getPathForMode(nextMode));
+    setMode(nextMode);
+    setStatus('');
+    setUserId(null);
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
     setLoading(true);
     setStatus(mode === 'login' ? 'Logowanie...' : 'Rejestracja...');
 
     try {
       const result = await requestJson(mode === 'login' ? '/login' : '/register', {
-        email: email,
+        email,
         password,
       });
 
@@ -61,33 +94,44 @@ export default function App() {
   return (
     <main>
       <h1>{mode === 'login' ? 'Logowanie' : 'Rejestracja'}</h1>
-      <div>
-        <label htmlFor="email">Email</label>
-        <br />
-        <input id="email" value={email} onChange={(event) => setEmail(event.target.value)}autoComplete="username"/>
-      </div>
-      <div style={{ marginTop: '8px' }}>
-        <label htmlFor="password">Hasło</label>
-        <br />
-        <input id="password" value={password} onChange={(event) => setPassword(event.target.value)} type="password" autoComplete="current-password"/>
-      </div>
-      <div style={{ marginTop: '12px' }}>
-        <button type="button" onClick={handleSubmit} disabled={loading} style={{ marginLeft: '8px' }}>
-          {mode === 'login' ? 'Zaloguj' : 'Zarejestruj'}
-        </button>
-        <button
-          type="button"
-          onClick={() => {
-            setMode(mode === 'login' ? 'register' : 'login');
-            setStatus('');
-            setUserId(null);
-          }}
-          disabled={loading}
-          style={{ marginLeft: '8px' }}
-        >
-          {mode === 'login' ? 'Przejdź do rejestracji' : 'Przejdź do logowania'}
-        </button>
-      </div>
+      <form noValidate onSubmit={handleSubmit}>
+        <div>
+          <label htmlFor="email">Email</label>
+          <br />
+          <input
+            id="email"
+            type="text"
+            autoComplete="username"
+            value={email}
+            onChange={(event) => setEmail(event.target.value)}
+          />
+        </div>
+        <div style={{ marginTop: '8px' }}>
+          <label htmlFor="password">Hasło</label>
+          <br />
+          <input
+            id="password"
+            type="password"
+            autoComplete="current-password"
+            value={password}
+            onChange={(event) => setPassword(event.target.value)}
+          />
+        </div>
+        <div style={{ marginTop: '12px' }}>
+          <button id="submit" type="submit" disabled={loading} style={{ marginLeft: '8px' }}>
+            {mode === 'login' ? 'Zaloguj' : 'Zarejestruj'}
+          </button>
+          <button
+            id="switch-mode"
+            type="button"
+            onClick={() => switchMode(mode === 'login' ? 'register' : 'login')}
+            disabled={loading}
+            style={{ marginLeft: '8px' }}
+          >
+            {mode === 'login' ? 'Przejdź do rejestracji' : 'Przejdź do logowania'}
+          </button>
+        </div>
+      </form>
       <p>Status: {status}</p>
       {userId !== null ? <p>ID użytkownika: {userId}</p> : null}
     </main>

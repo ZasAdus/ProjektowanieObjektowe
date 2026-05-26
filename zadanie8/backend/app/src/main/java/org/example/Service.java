@@ -5,9 +5,12 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 import java.util.Optional;
+import java.util.regex.Pattern;
 
 @Service
 class AuthService { 
+    private static final Pattern EMAIL_PATTERN = Pattern.compile("^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$");
+
     private final UserRepository userRepo;
     private final BCryptPasswordEncoder encoder;
 
@@ -17,8 +20,12 @@ class AuthService {
     }
 
     public LoginResponse validateLogin(String email, String password) {
-        if (email == null || email.isEmpty() || password == null || password.isEmpty()) {
+        if (email == null || email.isBlank() || password == null || password.isBlank()) {
             return new LoginResponse(false, "Podaj email i hasło"); 
+        }
+
+        if (!isValidEmail(email)) {
+            return new LoginResponse(false, "Podaj poprawny adres e-mail");
         }
 
         Optional<User> user = userRepo.findByEmail(email);
@@ -35,8 +42,12 @@ class AuthService {
     }
 
     public LoginResponse registerUser(String email, String password) {
-        if (email == null || email.isEmpty() || password == null || password.isEmpty()) {
+        if (email == null || email.isBlank() || password == null || password.isBlank()) {
             return new LoginResponse(false, "Podaj email i hasło");
+        }
+
+        if (!isValidEmail(email)) {
+            return new LoginResponse(false, "Podaj poprawny adres e-mail");
         }
 
         if (userRepo.findByEmail(email).isPresent()) {
@@ -46,6 +57,10 @@ class AuthService {
         User newUser = new User(email, encoder.encode(password));
         User savedUser = userRepo.save(newUser);
         return new LoginResponse(true, "Rejestracja zakończona pomyślnie", savedUser.getId());
+    }
+
+    private boolean isValidEmail(String email) {
+        return EMAIL_PATTERN.matcher(email.trim()).matches();
     }
 }
 

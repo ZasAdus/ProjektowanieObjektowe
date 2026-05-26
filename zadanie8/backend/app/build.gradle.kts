@@ -19,7 +19,6 @@ dependencies {
     implementation(libs.spring.boot.starter.data.jpa)
     implementation("org.springframework.security:spring-security-crypto:6.2.5")
     implementation(libs.postgresql.driver)
-    
     testImplementation(libs.junit)
     testImplementation("org.seleniumhq.selenium:selenium-java:4.22.0")
 }
