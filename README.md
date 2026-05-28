@@ -67,4 +67,11 @@ przeprowadź testy podatności na ataki typu Cross-Site Request Forgery
 (CSRF), próbując wymusić nieautoryzowaną zmianę ustawień konta
 spreparowanym linkiem, podczas gdy użytkownik posiada aktywną sesję w
 innej karcie.  <br>
-❌ 5.0 Stwórz scenariusz End-to-End w Playwright (minimum 50 asercji)  <br> <h1>
+❌ 5.0 Stwórz scenariusz End-to-End w Playwright (minimum 50 asercji)  <br>
+
+<h2>Zadanie 9 Chmura<h2>
+✅ 3.0 Należy stworzyć odpowiednie instancje po stronie chmury na dockerze [filmik](https://youtu.be/VaNWarjqiUs)<br>
+❌ 3.5 Stworzyć odpowiedni pipeline w Github Actions do budowania aplikacji<br>
+❌ 4.0 Dodać notyfikację mailową o zbudowaniu aplikacji<br>
+❌ 4.5 Dodać krok z deploymentem aplikacji serwerowej oraz klienckiej na chmurę<br>
+❌ 5.0 Dodać uruchomienie regresyjnych testów automatycznych (funkcjonalnych) jako krok w Actions<br><h1>

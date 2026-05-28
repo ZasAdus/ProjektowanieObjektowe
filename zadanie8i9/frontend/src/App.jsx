@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 
-const API_BASE_URL = '/api/auth';
+const API_BASE_URL =
+  window.__APP_CONFIG__?.VITE_API_BASE_URL ?? import.meta.env.VITE_API_BASE_URL ?? '/api/auth';
 
 function getModeFromPath(pathname) {
   const normalizedPath = pathname.replace(/\/+$/, '') || '/';
